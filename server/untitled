@@ -1,0 +1,45 @@
+"Topic" :
+{
+  "Entertainment" : [ null, true, true, true, null, true ],
+  "Events" : [ null, true, true, true, true ],
+  "User_Submitted" : {
+    "user_id" : 0
+  },
+  "Outside_Destinations" : {
+    "13" : true
+  },
+  "Transportation" : {
+    "8" : true,
+    "7" : true,
+    "6" : true,
+    "9" : true,
+    "10" : true
+  },
+  "Food_Drink" : {
+    "12" : true,
+    "11" : true
+  }
+},
+
+"ReportScale" : [ "small", "medium", "large", "extra-large" ],
+"ReportProperty" : [ "wait_time", "crowd_size", "capacity" ],
+"TopicCategory" : [ "Sporting_Events", "Concerts_and_Performances", "Festivals", "Rallies", "Exhibits", "Traffic", "Bike", "Bus", "Train", "Airports", "Restaurants", "Bars", "Parks" ],
+"Score" : {
+    "report_id" : 0,
+    "+1" : 0,
+    "-1" : 0
+  },
+
+"ScaleUnit" : [ null, "time", "percentage", "size", "custom" ],
+"Report" : {
+  "location" : "",
+  "topic_id" : 0,
+  "created_at" : "",
+  "updated_at" : "",
+  "scale_unit_id" : 0,
+  "comments" : "",
+  "property_id" : 0,
+  "Slug" : "",
+  "user_id" : 0,
+  "score" : 0
+},

@@ -3,16 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.3/firebase.js'></script>
+    <script src="bower_components/backfire/backbone-firebase.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <title>communally</title>  
   </head>
 
   <body>
-  <div class="container">
-    <h1>communally</h1>
-    <script src="bower_components/underscore/underscore-min.js"></script>
-    <script src="bower_components/jquery/jquery.min.js"></script>
-  </div>
+  <div id="App"></div>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="app/Models/AppModel.js"></script>  
+    <script src="app/Views/AppView.js"></script>
+    <script src="app/Models/Topic.js"></script>
+    <script src="app/Models/Report.js"></script>
+    <script src="app/Models/Reports.js"></script>
+    <script src="app/Models/Topics.js"></script>
+    <script src="app/Views/TopicView.js"></script>
+    <script src="app/Views/TopicCategoryView.js"></script>
+    <script src="app/Views/TopicsView.js"></script>
+    <script type="text/javascript">
+      $(document).on('ready', function(){
+        var app = new AppModel();
+        var appView = new AppView({model: app});
+          
+        });
+    </script>
   </body>
 </html>
