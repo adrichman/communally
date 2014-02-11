@@ -1,0 +1,13 @@
+{
+  "name": "communally",
+  "version": "0.0.1",
+  "main": "server/main.js",
+  "author": "Adam D Richman",
+  "license": "Copyright 2014, Adam D Richman. All rights reserved.",
+  "dependencies": {
+    "express": "3.4.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
