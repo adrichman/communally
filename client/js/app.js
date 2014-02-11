@@ -1,4 +1,11 @@
-var communallyApp = angular.module("communallyApp", ["firebase"]);
+var communallyApp = angular.module("communallyApp",["firebase", "ngRoute"]).config(function($routeProvider){
+  $routeProvider.when('/:link',
+  { 
+    controller: 'reportsListController',
+    templateUrl: '/templates/reports_template.html'
+  }
+  );
+});
 
 communallyApp.service('makeAuxRecord', ["$rootScope", "$firebase", 
   function($rootScope,$firebase){
@@ -49,10 +56,19 @@ communallyApp.controller("reportPropertiesController", ["$scope", "$firebase",
     $scope.properties = $firebase(ref);
   }
 ]);
-communallyApp.controller("reportsListController", ["$scope", "$firebase",
-  function($scope, $firebase){
-    var ref = new Firebase("https://communally.firebaseio.com/Report");
-    $scope.reports = $firebase(ref);
+communallyApp.controller("reportsListController", ["$scope", "$firebase", "$routeParams",
+  function($scope, $firebase, $routeParams){
+    // debugger;
+    console.log(JSON.stringify($routeParams));
+    console.log($scope);
+    var render = function(){
+      var path = $routeParams && $routeParams.link ? "https://communally.firebaseio.com/" + $routeParams.link + "Reports" : "https://communally.firebaseio.com/Report";
+      path = $routeParams.link === "All" ? "https://communally.firebaseio.com/Report" : path;
+      var ref = new Firebase(path);
+      $scope.reports = $firebase(ref);
+      console.log($scope.reports);
+    };
+    render();
   }
 ]);
 communallyApp.controller("newReportController", ["$rootScope","$scope", "$firebase", "makeAuxRecord",
@@ -63,6 +79,14 @@ communallyApp.controller("newReportController", ["$rootScope","$scope", "$fireba
     $scope.categories = $firebase(catRef);
     $scope.props = $firebase(propRef);
     $scope.reports = $firebase(ref);
+    $scope.clearForm = function(){
+      $scope.summary_input = "";
+      $scope.category_select = "";
+      $scope.property_select = "";
+      $scope.comments_input = "";
+      $scope.location_input = "";
+    };
+
     $scope.addReport = function(){
       var newRecord = 
       {
@@ -77,7 +101,9 @@ communallyApp.controller("newReportController", ["$rootScope","$scope", "$fireba
         $rootScope.record = newRecord;
         $scope.reports.$add(newRecord);
         makeAuxRecord.make(newRecord);
+        $scope.clearForm();
       }
+      // debugger;
       newRecord = "";
     }
   }

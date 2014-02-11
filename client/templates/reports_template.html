@@ -1,0 +1,93 @@
+<div class='col-xs-8 col-md-3'>
+  <h3>HAPPENING NOW</h3>
+  <div ng-controller="reportsListController">
+    <div ng-repeat="report in reports | orderBy:-reated_at">
+      <table style="background-color:rgba(123, 255, 0, 0.375)" class="table table-responsive table-curved ">
+        <tr>
+          <td class="col-md-6">location: </td><td class="col-md-6">{{ report.location }}</td>
+        </tr>
+        <tr>
+          <td class="col-md-6">summary: </td><td class="col-md-6">{{ report.summary }}</td>
+        </tr>
+        <tr>
+          <td class="col-md-6">category: </td><td class="col-md-6">{{ report.category.split("_").join(" ") }}</td>
+        </tr>
+        <tr>
+          <td class="col-md-6">why: </td><td class="col-md-6">{{ report.property.split("_").join(" ") }}</td>
+        </tr>
+        <tr>
+          <td class="col-md-6">comments: </td><td class="col-md-6">{{ report.comments }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class='col-xs-4 col-md-3'>
+<h3>REPORT</h3>
+
+<form name="createReportForm" class="form-horizontal" ng-controller="newReportController" id="createReportForm">
+  <!-- <fieldset> -->
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-xs-4 col-md-6 control-label">Location </label>  
+    <div class="col-xs-4 col-md-6">
+    <input id="location_input" ng-model="location_input" name="location_input" type="text" placeholder="Location" class="form-control input-md" required="required">
+      
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-xs-4 col-md-6 control-label">Summary</label>  
+    <div class="col-xs-4 col-md-6">
+    <input id="summary_input" ng-model="summary_input" name="summary_input" type="text" placeholder="Summary" class="form-control input-md" required="required">
+      
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-xs-4 col-md-6 control-label">Category</label>
+    <div class="col-xs-4 col-md-6">
+      <select ng-model="category_select" id="category_select" name="category_select" class="form-control">
+        <option ng-repeat="(key,cat) in categories">{{ cat.split("_").join(" ")}}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-xs-4 col-md-6 control-label">Why</label>
+    <div class="col-xs-4 col-md-6">
+      <select ng-model="property_select" id="property_select" name="property_select" class="form-control">
+        <option ng-repeat="prop in props">{{ prop.split("_").join(" ") }}</option>
+      </select>
+    </div>
+  </div>
+
+
+  <!-- Textarea -->
+  <div class="form-group">
+    <label class="col-xs-4 col-md-6 control-label">Comments</label>
+    <div class="col-xs-4 col-md-6">                     
+      <textarea class="form-control" ng-model="comments_input" id="comments_input" name="comments_input"></textarea>
+    </div>
+  </div>
+  <!-- SubmitButton -->
+  <div class="row row-fluid">
+    <div class="col-xs-4 col-md-6"></div>
+      <div class="col-xs-4 col-md-6">
+        <button class="btn btn-lg btn-primary" ng-click="addReport()">Submit</button>
+      </div>
+    </div>
+  <!-- </fieldset> -->
+  </form>
+</div>
+<div class='col-xs-4 col-md-3'>
+<div id="TopicsDiv">
+  <h3>FIND BY CATEGORY</h3>
+  <ul class="list-group">
+    <li class="list-unstyled list-group-item" style="background-color:rgba(245, 38, 38, 0.4)" ng-repeat="topic in topics"><a href="#{{topic}}" ng-model="topicLink" ng-click="handleClick(topicLink)">{{topic.split('_').join(' ')}}</a></li>
+  </ul>
+</div>
