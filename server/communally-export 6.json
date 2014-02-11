@@ -1,0 +1,46 @@
+{
+  "EntertainmentReports" : [ "" ],
+  "Topic" : [ null, "Events", "Food_and_Drink", "Recreational", "Transportation", "User_Submitted", "Other" ],
+  "ReportScale" : [ null, "Small", "Medium", "Large", "Extra-large" ],
+  "EventsReports" : [ "" ],
+  "ReportProperty" : [ null, "Capacity", "Crowd_size", "Wait_Time", "Other" ],
+  "TopicCategory" : [ null, "Airports", "Bars", "Bike", "Bus", "Concerts_and_Performances", "Exhibits", "Festivals", "Parks", "Public_Spaces", "Restaurants", "Sporting_Events", "Traffic", "Train", "Schools" ],
+  "Score" : {
+    "report_id" : 0,
+    "+1" : 0,
+    "-1" : 0
+  },
+  "ScaleUnit" : [ null, "Time", "Percentage", "Size", "Custom" ],
+  "Food_DrinkReports" : [ "" ],
+  "Report" : {
+    "-JFXVIp5n9_43DdrR9C8" : {
+      "location" : "here",
+      "created_at" : "2014-02-11T19:51:39.528Z",
+      "property" : "Capacity",
+      "summary" : "there",
+      "category" : "Restaurants",
+      "comments" : "yum"
+    }
+  },
+  "TransportationReports" : [ "" ],
+  "User" : {
+    "city" : "",
+    "state" : "",
+    "created_at" : "",
+    "password_salt" : "",
+    "password_hash" : "",
+    "name" : ""
+  },
+  "Outside_DestinationsReports" : [ "" ],
+  "Food_and_DrinkReports" : {
+    "-JFXVt8cMwhKK5pht2Hc" : {
+      "location" : "sdfs",
+      "created_at" : "2014-02-11T19:54:10.853Z",
+      "property" : "Capacity",
+      "summary" : "gsddf",
+      "category" : "Restaurants",
+      "comments" : "fdgd"
+    }
+  },
+  "User_SubmittedReports" : [ "" ]
+}

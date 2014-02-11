@@ -55,8 +55,8 @@ communallyApp.controller("reportsListController", ["$scope", "$firebase",
     $scope.reports = $firebase(ref);
   }
 ]);
-communallyApp.controller("newReportController", ["$scope", "$firebase", "makeAuxRecord",
-  function($scope, $firebase, makeAuxRecord){
+communallyApp.controller("newReportController", ["$rootScope","$scope", "$firebase", "makeAuxRecord",
+  function($rootScope, $scope, $firebase, makeAuxRecord){
     var ref = new Firebase("https://communally.firebaseio.com/Report");
     var catRef = new Firebase("https://communally.firebaseio.com/TopicCategory");
     var propRef = new Firebase("https://communally.firebaseio.com/ReportProperty");
@@ -73,10 +73,12 @@ communallyApp.controller("newReportController", ["$scope", "$firebase", "makeAux
         comments: $scope.comments_input,
         created_at: new Date(Date.now())
       };
-
-      $scope.reports.$add(newRecord);
-      makeAuxRecord.make(newRecord);
+      if ($rootScope.record !== newRecord){
+        $rootScope.record = newRecord;
+        $scope.reports.$add(newRecord);
+        makeAuxRecord.make(newRecord);
+      }
+      newRecord = "";
     }
-    $scope.newReport = "";
   }
 ]);
