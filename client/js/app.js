@@ -19,7 +19,6 @@ communallyApp.service('makeAuxRecord', ["$rootScope", "$firebase",
           "Train":"Transportation", 
           "Schools": "Other"
         };
-        debugger;
     
        var auxRef = new Firebase("https://communally.firebaseio.com/" + 
                                   categoriesToTopics[arguments[0].category.split(' ').join('_') ] + 
