@@ -280,6 +280,7 @@ body {
   background-color: rgba(17, 0, 43, 0.9);
   /*background-color: #272b30;*/
   background-image: url('/img/bg1_d.png');
+  background-position-x: -217px;
 }
 input,
 button,
