@@ -1,7 +1,7 @@
 {
   "name": "communally",
   "version": "0.0.1",
-  "main": "server/server.js",
+  "main": "/server/server.js",
   "author": "Adam D Richman",
   "license": "Copyright 2014, Adam D Richman. All rights reserved.",
   "dependencies": {
