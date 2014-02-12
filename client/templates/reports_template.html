@@ -1,3 +1,4 @@
+<!-- <div style='background-image: url('/img/bg1.jpg');"> -->
 <div class='col-xs-8 col-md-3'>
   <h3>HAPPENING NOW</h3>
   <div ng-controller="reportsListController">
@@ -32,7 +33,7 @@
   <div class="form-group">
     <label class="col-xs-4 col-md-6 control-label">Location </label>  
     <div class="col-xs-4 col-md-6">
-    <input id="location_input" ng-model="location_input" name="location_input" type="text" placeholder="Location" class="form-control input-md" required="required">
+    <input id="location_input" ng-model="location_input" name="location_input" ng-bind-html="location_input" type="text" placeholder="Location" class="form-control input-md" required="required">
       
     </div>
   </div>
@@ -41,7 +42,7 @@
   <div class="form-group">
     <label class="col-xs-4 col-md-6 control-label">Summary</label>  
     <div class="col-xs-4 col-md-6">
-    <input id="summary_input" ng-model="summary_input" name="summary_input" type="text" placeholder="Summary" class="form-control input-md" required="required">
+    <input id="summary_input" ng-model="summary_input" name="summary_input"  ng-bind-html="summary_input" type="text" placeholder="Summary" class="form-control input-md" required="required">
       
     </div>
   </div>
@@ -71,7 +72,7 @@
   <div class="form-group">
     <label class="col-xs-4 col-md-6 control-label">Comments</label>
     <div class="col-xs-4 col-md-6">                     
-      <textarea class="form-control" ng-model="comments_input" id="comments_input" name="comments_input"></textarea>
+      <textarea class="form-control" ng-model="comments_input" id="comments_input"  ng-bind-html="comments_input" name="comments_input"></textarea>
     </div>
   </div>
   <!-- SubmitButton -->
@@ -91,3 +92,4 @@
     <li class="list-unstyled list-group-item" style="background-color:rgba(245, 38, 38, 0.4)" ng-repeat="topic in topics"><a href="#{{topic}}" ng-model="topicLink" ng-click="handleClick(topicLink)">{{topic.split('_').join(' ')}}</a></li>
   </ul>
 </div>
+<!-- </div> -->

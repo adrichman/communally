@@ -1,5 +1,13 @@
 var communallyApp = angular.module("communallyApp",["firebase", "ngRoute"]).config(function($routeProvider){
-  $routeProvider.when('/:link',
+  $routeProvider
+
+  .when('/',
+  { 
+    controller: 'reportsListController',
+    templateUrl: '/templates/reports_template.html'
+  }
+  )
+  .when('/:link',
   { 
     controller: 'reportsListController',
     templateUrl: '/templates/reports_template.html'

@@ -10,6 +10,8 @@ app.configure(function(){
 var routes = {
   "/"                                                  : {'path':'client/index.html',                                       'type':'text/html'},
   "/index.html"                                        : {'path':'client/index.html',                                       'type':'text/html'},
+  "/img/bg1_d.png"                                       : {'path':'client/img/bg1_d.png',                                       'type':'image/png'},
+  "/img/bg1.jpg"                                       : {'path':'client/img/bg1.jpg',                                       'type':'image/jpg'},
   "/templates/reports_template.html"                   : {'path':'client/templates/reports_template.html',                  'type':'text/html'},
   "/fonts/glyphicons-halflings-regular.woff"           : {'path':'client/fonts/glyphicons-halflings-regular.woff',         'type':'font/opentype'},
   "/fonts/glyphicons-halflings-regular.ttf"            : {'path':'client/fonts/glyphicons-halflings-regular.ttf',          'type':'font/opentype'},
