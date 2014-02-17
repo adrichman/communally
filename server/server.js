@@ -4,7 +4,6 @@ var app = express();
 
 app.configure(function(){
   app.use(express.static('./client'));
-  app.use(express.static('./client/img'));
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
