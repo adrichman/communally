@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "~2.0.3",
     "underscore": "~1.5.2",
-    "backbone": "~1.1.0"
+    "backbone": "~1.1.0",
+    "angular-animate": "~1.2.13"
   },
   "ignore": [
     "**/.*",
@@ -12,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "angular": "1.2.13"
+  }
 }

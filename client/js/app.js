@@ -1,4 +1,4 @@
-var communallyApp = angular.module("communallyApp",["firebase", "ngRoute"]).config(function($routeProvider){
+var communallyApp = angular.module("communallyApp",["firebase", "ngRoute", "ngAnimate"]).config(function($routeProvider){
   $routeProvider
 
   .when('/',
@@ -64,7 +64,7 @@ communallyApp.controller("reportPropertiesController", ["$scope", "$firebase",
     $scope.properties = $firebase(ref);
   }
 ]);
-communallyApp.controller("reportsListController", ["$scope", "$firebase", "$routeParams",
+communallyApp.controller("reportsListController", ["$scope", "$firebase", "$routeParams","$animate",
   function($scope, $firebase, $routeParams){
     // debugger;
     console.log(JSON.stringify($routeParams));

@@ -2,8 +2,8 @@
 <div class='col-xs-8 col-md-3'>
   <h3>HAPPENING NOW</h3>
   <div ng-controller="reportsListController">
-    <div ng-repeat="report in reports | orderByPriority | orderBy:'created_at':true">
-      <table style="background-color:rgba(123, 255, 0, 0.375)" class="table table-responsive table-curved ">
+    <div ng-repeat="report in reports | orderByPriority | orderBy:'created_at':true" class="reportTable" ng-hide>
+      <table style="background-color:rgba(123, 255, 0, 0.375)" class="table table-responsive table-curved">
         <tr>
           <td class="col-md-6">location: </td><td class="col-md-6">{{ report.location }}</td>
         </tr>

@@ -1,0 +1,21 @@
+/*div*/
+/*.reportTable,*/
+.reportTable.ng-enter,
+.reportTable.ng-leave, 
+{
+  /*color: black;*/
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.reportTable.ng-enter,
+.reportTable.ng-leave.ng-leave-active {
+  opacity:0;
+  transition:0.5s linear all;
+}
+
+.reportTable.ng-leave,
+.reportTable.ng-enter.ng-enter-active {
+  opacity:1;
+  transition:0.5s linear all;
+}
