@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/slate/bootstrap.css">
+    <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
       footer {
@@ -25,21 +25,17 @@
 
   <body ng-controller="topicsController">
     <div id="App">
-      <div class='container-fluid'><header class="navbar-static-top modal-header"><h1 class='h1' style="text-align:right"><span>communally </span><span class="glyphicon glyphicon-comment"> </span></h1><h4 style="text-align:right">crowd-source all of the places and also all of the things</h4></header>
-      <div class='row panel panel-body panel-list-group'>
-        <div class='row group' ng-view=""></div>
+      <div class='container-fluid'>
+        <header class="navbar-static-top modal-header">
+          <h1 class='h1' style="text-align:right"><span>communally </span><span class="glyphicon glyphicon-comment"> </span></h1>
+          <h4 style="text-align:right">crowd-source all of the places and also all of the things</h4>
+        </header>
+        <div class='row panel panel-body panel-list-group'>
+          <div class='row group' ng-view=""></div>
+        </div>
       </div>
-    </div>
     </div>
     <footer class="modal-footer" style="text-align:right">uh oh, inc.</footer>
     <script type="text/javascript" src="js/app.js"></script>
-   
-    <script type="text/javascript">
-    //   document.getElementsByTagName('button').onclick = 
-    //   function(e){
-    //       e.preventDefault();
-    //   };
-    // </script>
-
   </body>
 </html>
